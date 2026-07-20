@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 26px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            height: 50px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #sim {
+            background-color: #28a745;
+            color: white;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        #sim:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        #nao {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+            box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="conteudo">
+        <h1>Quer sair comigo sexta? ❤️</h1>
+        <div class="buttons">
+            <button id="sim" onclick="aceito()">SIM</button>
+            <button id="nao" onmouseover="desvia(this)" onclick="desvia(this)">NÃO</button>
+        </div>
+    </div>
+
+    <script>
+        function aceito() {
+            alert("Já sabia que você ia aceitar! ❤️🥰");
+            
+            location.href = "https://www.tiktok.com/@mariaaparecidadias20/video/7645300866982939924?q=eu%20quero%20voce%20pra%20sempre&t=1784590753164";
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            
+            btn.style.top = geraPosicao(10, 80) + "%";
+            btn.style.left = geraPosicao(10, 80) + "%";
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min);
+        }
+    </script>
+
+</body>
+</html>
